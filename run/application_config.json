@@ -105,6 +105,7 @@
         "F:\\egg\\node_modules\\egg-logrotator\\config\\locales",
         "F:\\egg\\node_modules\\egg-static\\config\\locales",
         "F:\\egg\\node_modules\\egg-view\\config\\locales",
+        "F:\\egg\\node_modules\\egg-view-nunjucks\\config\\locales",
         "F:\\egg\\node_modules\\egg\\config\\locales",
         "F:\\egg\\config\\locales"
       ],
@@ -171,11 +172,22 @@
       "maxFiles": 1000
     },
     "view": {
-      "root": "F:\\egg\\app\\view",
+      "root": [
+        "F:\\egg\\app\\view"
+      ],
       "cache": false,
       "defaultExtension": ".html",
-      "defaultViewEngine": "",
-      "mapping": {}
+      "defaultViewEngine": "nunjucks",
+      "mapping": {
+        ".tpl": "nunjucks"
+      }
+    },
+    "nunjucks": {
+      "autoescape": true,
+      "throwOnUndefined": false,
+      "trimBlocks": false,
+      "lstripBlocks": false,
+      "cache": false
     },
     "env": "local",
     "name": "eggself",
@@ -208,7 +220,8 @@
       },
       "homepage": "https://github.com/xuxiaoping2016/egg#readme",
       "dependencies": {
-        "egg": "^2.23.0"
+        "egg": "^2.23.0",
+        "egg-view-nunjucks": "^2.2.0"
       },
       "devDependencies": {
         "egg-bin": "^4.13.2"
@@ -276,13 +289,17 @@
         "keepAlive": true,
         "freeSocketTimeout": 4000,
         "maxSockets": 9007199254740991,
-        "maxFreeSockets": 256
+        "maxFreeSockets": 256,
+        "timeout": 30000,
+        "socketActiveTTL": 0
       },
       "httpsAgent": {
         "keepAlive": true,
         "freeSocketTimeout": 4000,
         "maxSockets": 9007199254740991,
-        "maxFreeSockets": 256
+        "maxFreeSockets": 256,
+        "timeout": 30000,
+        "socketActiveTTL": 0
       }
     },
     "meta": {
@@ -477,6 +494,20 @@
       "from": "F:\\egg\\node_modules\\egg\\config\\plugin.js",
       "path": "F:\\egg\\node_modules\\egg-view",
       "version": "2.1.2"
+    },
+    "nunjucks": {
+      "enable": true,
+      "package": "egg-view-nunjucks",
+      "name": "nunjucks",
+      "dependencies": [
+        "security",
+        "view"
+      ],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "F:\\egg\\config\\plugin.js",
+      "path": "F:\\egg\\node_modules\\egg-view-nunjucks",
+      "version": "2.2.0"
     }
   }
 }

@@ -145,8 +145,17 @@
       "root": "F:\\egg\\app\\view",
       "cache": false,
       "defaultExtension": ".html",
-      "defaultViewEngine": "",
-      "mapping": {}
+      "defaultViewEngine": "nunjucks",
+      "mapping": {
+        ".tpl": "nunjucks"
+      }
+    },
+    "nunjucks": {
+      "autoescape": true,
+      "throwOnUndefined": false,
+      "trimBlocks": false,
+      "lstripBlocks": false,
+      "cache": false
     },
     "env": "local",
     "name": "eggself",
@@ -179,7 +188,8 @@
       },
       "homepage": "https://github.com/xuxiaoping2016/egg#readme",
       "dependencies": {
-        "egg": "^2.23.0"
+        "egg": "^2.23.0",
+        "egg-view-nunjucks": "^2.2.0"
       },
       "devDependencies": {
         "egg-bin": "^4.13.2"
@@ -431,6 +441,20 @@
       "from": "F:\\egg\\node_modules\\egg\\config\\plugin.js",
       "path": "F:\\egg\\node_modules\\egg-view",
       "version": "2.1.2"
+    },
+    "nunjucks": {
+      "enable": true,
+      "package": "egg-view-nunjucks",
+      "name": "nunjucks",
+      "dependencies": [
+        "security",
+        "view"
+      ],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "F:\\egg\\config\\plugin.js",
+      "path": "F:\\egg\\node_modules\\egg-view-nunjucks",
+      "version": "2.2.0"
     }
   }
 }

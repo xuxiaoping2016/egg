@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/xuxiaoping2016/egg#readme",
   "dependencies": {
-    "egg": "^2.23.0"
+    "egg": "^2.23.0",
+    "egg-view-nunjucks": "^2.2.0"
   },
   "devDependencies": {
     "egg-bin": "^4.13.2"

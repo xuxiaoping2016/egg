@@ -1,5 +1,14 @@
 {
   "keys": "F:\\egg\\config\\config.default.js",
+  "view": {
+    "defaultViewEngine": "F:\\egg\\config\\config.default.js",
+    "mapping": {
+      ".tpl": "F:\\egg\\config\\config.default.js"
+    },
+    "root": "F:\\egg\\node_modules\\egg-view\\config\\config.default.js",
+    "cache": "F:\\egg\\node_modules\\egg-view\\config\\config.local.js",
+    "defaultExtension": "F:\\egg\\node_modules\\egg-view\\config\\config.default.js"
+  },
   "session": {
     "maxAge": "F:\\egg\\node_modules\\egg-session\\config\\config.default.js",
     "key": "F:\\egg\\node_modules\\egg-session\\config\\config.default.js",
@@ -137,12 +146,12 @@
     "buffer": "F:\\egg\\node_modules\\egg-static\\config\\config.default.js",
     "maxFiles": "F:\\egg\\node_modules\\egg-static\\config\\config.default.js"
   },
-  "view": {
-    "root": "F:\\egg\\node_modules\\egg-view\\config\\config.default.js",
-    "cache": "F:\\egg\\node_modules\\egg-view\\config\\config.local.js",
-    "defaultExtension": "F:\\egg\\node_modules\\egg-view\\config\\config.default.js",
-    "defaultViewEngine": "F:\\egg\\node_modules\\egg-view\\config\\config.default.js",
-    "mapping": "F:\\egg\\node_modules\\egg-view\\config\\config.default.js"
+  "nunjucks": {
+    "autoescape": "F:\\egg\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
+    "throwOnUndefined": "F:\\egg\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
+    "trimBlocks": "F:\\egg\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
+    "lstripBlocks": "F:\\egg\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
+    "cache": "F:\\egg\\node_modules\\egg-view-nunjucks\\config\\config.local.js"
   },
   "env": "F:\\egg\\node_modules\\egg\\config\\config.default.js",
   "name": "F:\\egg\\node_modules\\egg\\config\\config.default.js",
@@ -172,7 +181,8 @@
     },
     "homepage": "F:\\egg\\node_modules\\egg\\config\\config.default.js",
     "dependencies": {
-      "egg": "F:\\egg\\node_modules\\egg\\config\\config.default.js"
+      "egg": "F:\\egg\\node_modules\\egg\\config\\config.default.js",
+      "egg-view-nunjucks": "F:\\egg\\node_modules\\egg\\config\\config.default.js"
     },
     "devDependencies": {
       "egg-bin": "F:\\egg\\node_modules\\egg\\config\\config.default.js"
