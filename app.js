@@ -10,7 +10,6 @@ const app = new Koa();
 // log request URL:
 app.use(async (ctx, next) => {
     console.log(`Process ${ctx.request.method} ${ctx.request.url}`);
-    console.log(ctx.req)
     await next();
 });
 
@@ -51,7 +50,7 @@ app.use(router.routes());
 
 // 在端口3000监听:
 app.listen(3001);
-console.log('app started at port 3000...');
+console.log('app started at port 3001...');
 
 
 const ctx = {
