@@ -1,0 +1,50 @@
+<form class="form-horizontal memberCardLevel--wrapper" name="myForm" form-validator formvalidatorconfig="eventformvalidate" method="post">
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="close()" class="pull-right">&times;</button>
+        <h4 class="modal-title">会员等级</h4>
+    </div>
+    <div class="modal-body">
+        <div class="r-3x bg-gray wrapper">
+            <div ng-if="page.total" class="r-3x wrapper-xs padder-sm">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div class="clear control-label">
+                            <input type="checkbox" class="checkbox pull-left" ng-checked="params.checkall" ng-click="check.checkall(params.ids)">
+                            <b class="pull-left m-l-xs">当前页全选</b>
+                        </div>
+                    </div>
+                    <!-- <div class="col-sm-7 text-right">
+                        <div class="input-group">
+                            <input type="text" enter-key-down userfn="search()" class="input-sm form-control" ng-model="page.putkey" placeholder="请输入关键字">
+                            <span class="input-group-btn">
+                                <button class="btn btn-sm btn-default" title="搜索" ng-click="search()">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div ng-if="page.total" class="tab-container">
+                <ul class="selectLinks clear">
+                    <li class="pull-left" ng-repeat="item in list">
+                        <div class="clear">
+                            <input type="checkbox" class="checkbox pull-left" name="memberLevel" ng-checked="check.isDisabled(item)||params.ids.indexOf(item.id)>-1" ng-disabled="check.isDisabled(item)" ng-click="check.checkItem(item,params.ids,$event)">
+                            <span ng-attr-title="{{item.type}}" class="pull-left m-l-xs text-ellipsis w-80p">{{item.type}}</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="text-right m-t-sm">
+                    <div class="m-n" wmo-pagination page-index="page.pageNum" page-size="page.pageSize" total-cnt="page.total" on-page-index-changed="changedPage()" show-goto-page="false"></div>
+                </div>
+            </div>
+
+            <!-- 成功拉取数据，但是list为空数组 -->
+            <div ng-if="list && !list.length" class="text-center">当前暂未创建会员等级，请创建后操作</div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-click="complete()">确定</button>
+        <button type="button" class="btn btn-default" ng-click="close()">取消</button>
+    </div>
+</form>
