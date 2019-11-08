@@ -9,6 +9,14 @@
     "cache": "F:\\egg\\node_modules\\egg-view\\config\\config.local.js",
     "defaultExtension": "F:\\egg\\node_modules\\egg-view\\config\\config.default.js"
   },
+  "robot": {
+    "ua": "F:\\egg\\config\\config.local.js"
+  },
+  "news": {
+    "pageSize": "F:\\egg\\config\\config.default.js",
+    "serverUrl": "F:\\egg\\config\\config.default.js",
+    "url": "F:\\egg\\config\\config.default.js"
+  },
   "session": {
     "maxAge": "F:\\egg\\node_modules\\egg-session\\config\\config.default.js",
     "key": "F:\\egg\\node_modules\\egg-session\\config\\config.default.js",
@@ -156,6 +164,7 @@
   "env": "F:\\egg\\node_modules\\egg\\config\\config.default.js",
   "name": "F:\\egg\\node_modules\\egg\\config\\config.default.js",
   "proxy": "F:\\egg\\node_modules\\egg\\config\\config.default.js",
+  "maxIpsCount": "F:\\egg\\node_modules\\egg\\config\\config.default.js",
   "maxProxyCount": "F:\\egg\\node_modules\\egg\\config\\config.default.js",
   "protocolHeaders": "F:\\egg\\node_modules\\egg\\config\\config.default.js",
   "ipHeaders": "F:\\egg\\node_modules\\egg\\config\\config.default.js",
@@ -182,10 +191,14 @@
     "homepage": "F:\\egg\\node_modules\\egg\\config\\config.default.js",
     "dependencies": {
       "egg": "F:\\egg\\node_modules\\egg\\config\\config.default.js",
-      "egg-view-nunjucks": "F:\\egg\\node_modules\\egg\\config\\config.default.js"
+      "egg-view-nunjucks": "F:\\egg\\node_modules\\egg\\config\\config.default.js",
+      "i": "F:\\egg\\node_modules\\egg\\config\\config.default.js",
+      "moment": "F:\\egg\\node_modules\\egg\\config\\config.default.js",
+      "npm": "F:\\egg\\node_modules\\egg\\config\\config.default.js"
     },
     "devDependencies": {
-      "egg-bin": "F:\\egg\\node_modules\\egg\\config\\config.default.js"
+      "egg-bin": "F:\\egg\\node_modules\\egg\\config\\config.default.js",
+      "egg-mock": "F:\\egg\\node_modules\\egg\\config\\config.default.js"
     }
   },
   "baseDir": "F:\\egg\\node_modules\\egg\\config\\config.default.js",
@@ -212,6 +225,7 @@
     "encoding": "F:\\egg\\node_modules\\egg\\config\\config.default.js",
     "formLimit": "F:\\egg\\node_modules\\egg\\config\\config.default.js",
     "jsonLimit": "F:\\egg\\node_modules\\egg\\config\\config.default.js",
+    "textLimit": "F:\\egg\\node_modules\\egg\\config\\config.default.js",
     "strict": "F:\\egg\\node_modules\\egg\\config\\config.default.js",
     "queryString": {
       "arrayLimit": "F:\\egg\\node_modules\\egg\\config\\config.default.js",

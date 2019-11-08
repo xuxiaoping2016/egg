@@ -193,6 +193,7 @@
     "name": "eggself",
     "keys": "<String len: 7>",
     "proxy": false,
+    "maxIpsCount": 0,
     "maxProxyCount": 0,
     "protocolHeaders": "x-forwarded-proto",
     "ipHeaders": "x-forwarded-for",
@@ -203,7 +204,7 @@
       "description": "egg.js学习",
       "main": "index.js",
       "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "egg-bin test",
         "dev": "egg-bin dev"
       },
       "repository": {
@@ -221,10 +222,14 @@
       "homepage": "https://github.com/xuxiaoping2016/egg#readme",
       "dependencies": {
         "egg": "^2.23.0",
-        "egg-view-nunjucks": "^2.2.0"
+        "egg-view-nunjucks": "^2.2.0",
+        "i": "^0.3.6",
+        "moment": "^2.24.0",
+        "npm": "^6.13.0"
       },
       "devDependencies": {
-        "egg-bin": "^4.13.2"
+        "egg-bin": "^4.14.0",
+        "egg-mock": "^3.24.2"
       }
     },
     "baseDir": "F:\\egg",
@@ -249,8 +254,9 @@
     "bodyParser": {
       "enable": true,
       "encoding": "utf8",
-      "formLimit": "100kb",
-      "jsonLimit": "100kb",
+      "formLimit": "1mb",
+      "jsonLimit": "1mb",
+      "textLimit": "1mb",
       "strict": true,
       "queryString": {
         "arrayLimit": 100,
@@ -332,6 +338,16 @@
       "responseTimeout": 60000
     },
     "onClientError": null,
+    "robot": {
+      "ua": [
+        {}
+      ]
+    },
+    "news": {
+      "pageSize": 5,
+      "serverUrl": "https://hacker-news.firebaseio.com/v0",
+      "url": "http://api.douban.com/v2/movie"
+    },
     "coreMiddlewares": "~config~coreMiddleware",
     "appMiddlewares": [],
     "appMiddleware": "~config~appMiddlewares",
@@ -371,7 +387,7 @@
       "env": [],
       "from": "F:\\egg\\node_modules\\egg\\config\\plugin.js",
       "path": "F:\\egg\\node_modules\\egg-security",
-      "version": "2.6.1"
+      "version": "2.7.0"
     },
     "jsonp": {
       "enable": true,
@@ -443,7 +459,7 @@
       "env": [],
       "from": "F:\\egg\\node_modules\\egg\\config\\plugin.js",
       "path": "F:\\egg\\node_modules\\egg-multipart",
-      "version": "2.9.0"
+      "version": "2.9.1"
     },
     "development": {
       "enable": true,
