@@ -1,0 +1,116 @@
+2019-12-05 11:17:18,065 ERROR 233004 [-/127.0.0.1/-/32ms GET /news] nodejs.TypeError: Cannot destructure property `serverUrl` of 'undefined' or 'null'.
+    at NewsService.list (F:\egg\app\service\news.js:7:49)
+    at NewsController.list (F:\egg\app\controller\news.js:15:49)
+    at Object.callFn (F:\egg\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (F:\egg\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (F:\egg\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (F:\egg\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (F:\egg\node_modules\koa-compose\index.js:44:32)
+    at next (F:\egg\node_modules\koa-compose\index.js:45:18)
+    at F:\egg\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (F:\egg\node_modules\koa-compose\index.js:44:32)
+
+pid: 233004
+hostname: DESKTOP-9OJO1FB
+
+2019-12-05 11:18:23,466 ERROR 222356 [-/127.0.0.1/-/5051ms GET /news] nodejs.ConnectionTimeoutError: Connect timeout for 5000ms, GET https://hacker-news.firebaseio.com/v0/topstories.json -2 (connected: false, keepalive socket: false, agent status: {"createSocketCount":1,"createSocketErrorCount":0,"closeSocketCount":1,"errorSocketCount":0,"timeoutSocketCount":0,"requestCount":0,"freeSockets":{},"sockets":{},"requests":{}}, socketHandledRequests: 1, socketHandledResponses: 0)
+headers: {}
+headers: {}
+    at Timeout._onTimeout (F:\egg\node_modules\urllib\lib\urllib.js:926:15)
+    at ontimeout (timers.js:424:11)
+    at tryOnTimeout (timers.js:288:5)
+    at listOnTimeout (timers.js:251:5)
+    at Timer.processTimers (timers.js:211:10)
+name: "ConnectionTimeoutError"
+requestId: 1
+data: undefined
+path: "/v0/topstories.json?orderBy=%22%24key%22&startAt=%220%22&endAt=%224%22"
+status: -2
+headers: {}
+res: {"status":-2,"statusCode":-2,"statusMessage":null,"headers":{},"size":0,"aborted":false,"rt":5015,"keepAliveSocket":false,"requestUrls":["https://hacker-news.firebaseio.com/v0/topstories.json"],"timing":null,"remoteAddress":"35.201.97.85","remotePort":"","socketHandledRequests":1,"socketHandledResponses":0}
+pid: 222356
+hostname: DESKTOP-9OJO1FB
+
+2019-12-05 11:18:55,114 ERROR 235368 [-/127.0.0.1/-/5050ms GET /news] nodejs.ConnectionTimeoutError: Connect timeout for 5000ms, GET https://hacker-news.firebaseio.com/v0/topstories.json -2 (connected: false, keepalive socket: false, agent status: {"createSocketCount":1,"createSocketErrorCount":0,"closeSocketCount":1,"errorSocketCount":0,"timeoutSocketCount":0,"requestCount":0,"freeSockets":{},"sockets":{},"requests":{}}, socketHandledRequests: 1, socketHandledResponses: 0)
+headers: {}
+headers: {}
+    at Timeout._onTimeout (F:\egg\node_modules\urllib\lib\urllib.js:926:15)
+    at ontimeout (timers.js:424:11)
+    at tryOnTimeout (timers.js:288:5)
+    at listOnTimeout (timers.js:251:5)
+    at Timer.processTimers (timers.js:211:10)
+name: "ConnectionTimeoutError"
+requestId: 1
+data: undefined
+path: "/v0/topstories.json?orderBy=%22%24key%22&startAt=%220%22&endAt=%224%22"
+status: -2
+headers: {}
+res: {"status":-2,"statusCode":-2,"statusMessage":null,"headers":{},"size":0,"aborted":false,"rt":5016,"keepAliveSocket":false,"requestUrls":["https://hacker-news.firebaseio.com/v0/topstories.json"],"timing":null,"remoteAddress":"35.201.97.85","remotePort":"","socketHandledRequests":1,"socketHandledResponses":0}
+pid: 235368
+hostname: DESKTOP-9OJO1FB
+
+2019-12-05 11:20:35,575 ERROR 235368 [-/127.0.0.1/-/5023ms GET /news] nodejs.ConnectionTimeoutError: Connect timeout for 5000ms, GET https://hacker-news.firebaseio.com/v0/topstories.json -2 (connected: false, keepalive socket: false, agent status: {"createSocketCount":2,"createSocketErrorCount":0,"closeSocketCount":2,"errorSocketCount":0,"timeoutSocketCount":0,"requestCount":0,"freeSockets":{},"sockets":{},"requests":{}}, socketHandledRequests: 1, socketHandledResponses: 0)
+headers: {}
+headers: {}
+    at Timeout._onTimeout (F:\egg\node_modules\urllib\lib\urllib.js:926:15)
+    at ontimeout (timers.js:424:11)
+    at tryOnTimeout (timers.js:288:5)
+    at listOnTimeout (timers.js:251:5)
+    at Timer.processTimers (timers.js:211:10)
+name: "ConnectionTimeoutError"
+requestId: 2
+data: undefined
+path: "/v0/topstories.json?orderBy=%22%24key%22&startAt=%220%22&endAt=%224%22"
+status: -2
+headers: {}
+res: {"status":-2,"statusCode":-2,"statusMessage":null,"headers":{},"size":0,"aborted":false,"rt":5001,"keepAliveSocket":false,"requestUrls":["https://hacker-news.firebaseio.com/v0/topstories.json"],"timing":null,"remoteAddress":"35.201.97.85","remotePort":"","socketHandledRequests":1,"socketHandledResponses":0}
+pid: 235368
+hostname: DESKTOP-9OJO1FB
+
+2019-12-05 13:18:08,648 ERROR 237076 nodejs.ClusterClientNoResponseError: client no response in 5609086ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (F:\egg\node_modules\cluster-client\lib\leader.js:77:23)
+    at ontimeout (timers.js:424:11)
+    at tryOnTimeout (timers.js:288:5)
+    at listOnTimeout (timers.js:251:5)
+    at Timer.processTimers (timers.js:211:10)
+name: "ClusterClientNoResponseError"
+pid: 237076
+hostname: DESKTOP-9OJO1FB
+
+2019-12-05 13:30:31,950 ERROR 237076 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onread (net.js:660:25)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 237076
+hostname: DESKTOP-9OJO1FB
+
+2019-12-05 17:22:07,369 ERROR 238724 [-/127.0.0.1/-/32ms GET /news] nodejs.ReferenceError: reportTime is not defined
+    at F:\egg\app\middleware\report.js:6:7
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 238724
+hostname: DESKTOP-9OJO1FB
+
+2019-12-05 17:22:19,597 ERROR 238724 [-/127.0.0.1/-/6ms GET /] nodejs.ReferenceError: reportTime is not defined
+    at F:\egg\app\middleware\report.js:6:7
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 238724
+hostname: DESKTOP-9OJO1FB
+
+2019-12-05 17:22:19,888 ERROR 238724 [-/127.0.0.1/-/0ms GET /favicon.ico] nodejs.ReferenceError: reportTime is not defined
+    at F:\egg\app\middleware\report.js:6:7
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 238724
+hostname: DESKTOP-9OJO1FB
+
+2019-12-05 17:22:22,066 ERROR 238724 [-/127.0.0.1/-/10ms GET /news] nodejs.ReferenceError: reportTime is not defined
+    at F:\egg\app\middleware\report.js:6:7
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 238724
+hostname: DESKTOP-9OJO1FB
+
