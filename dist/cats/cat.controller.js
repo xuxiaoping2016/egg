@@ -13,16 +13,22 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
+const create_cat_dto_1 = require("./create-cat.dto");
 const cat_service_1 = require("./cat.service");
 let CatController = class CatController {
     constructor(catService) {
         this.catService = catService;
     }
-    create() {
+    create(createCatDto) {
+        console.log(createCatDto);
+        this.catService.create(createCatDto);
         return 'This action adds a new cat';
     }
-    findAll(request) {
-        return 'This action returns all cats';
+    async findAll() {
+        return this.catService.findAll();
+    }
+    findAll2(request) {
+        return 'Tnvmnvmis action returns all cats';
     }
     getDocs(version) {
         if (version && version === '5') {
@@ -36,17 +42,26 @@ let CatController = class CatController {
 };
 __decorate([
     common_1.Post(),
+    __param(0, common_1.Body()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
+    __metadata("design:paramtypes", [create_cat_dto_1.CreateCatDto]),
     __metadata("design:returntype", String)
 ], CatController.prototype, "create", null);
 __decorate([
+    common_1.Get(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Promise)
+], CatController.prototype, "findAll", null);
+__decorate([
     common_1.Get('ab*cd'),
+    common_1.HttpCode(204),
+    common_1.Redirect('https://nestjs.com', 301),
     __param(0, common_1.Req()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", String)
-], CatController.prototype, "findAll", null);
+], CatController.prototype, "findAll2", null);
 __decorate([
     common_1.Get('docs'),
     common_1.Redirect('https://docs.nestjs.com', 302),

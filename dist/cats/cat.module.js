@@ -16,6 +16,7 @@ CatModule = __decorate([
         imports: [],
         controllers: [cat_controller_1.CatController],
         providers: [cat_service_1.CatService],
+        exports: [cat_service_1.CatService]
     })
 ], CatModule);
 exports.CatModule = CatModule;

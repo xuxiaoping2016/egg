@@ -1113,9 +1113,17 @@
         "version": "260f889b9e2b69f77be1155348eb345166aec664b3efff6720053c6844a41f28",
         "signature": "3293b0d1d6a7f902316e164fcf36ae099f1bbb0224484586eaab30d9dea78d32"
       },
+      "../src/cats/create-cat.dto.ts": {
+        "version": "866717c581e2ee5b1a9fa7baeac5d10389e4b6db3171417d4800bc353037eb80",
+        "signature": "72d399a1fd1ef592439b8de5ac72851633b601abcb0d3f6b4cc7e9715c8d2643"
+      },
+      "../src/cats/cat.interface.ts": {
+        "version": "cf52f1264d682fba0a51db131c80c1addb00c450045604f30c889dfdf9aba463",
+        "signature": "7ad85f236b2ff2669fb08082fb229e8908ee6041720ab458beb3a8239588d018"
+      },
       "../src/cats/cat.service.ts": {
-        "version": "4db1b4177a941872233a9d7cd0fa103de4afc4c67d690508848550247df365ed",
-        "signature": "b016834114b9cb92281639026daa10a1b6397bbc5bbce22fd421555083f8bc41"
+        "version": "ac68cfcd3d4890b382de45354c34115a2ddf7e35bedc6c1e8cac30bc1ceb8afc",
+        "signature": "e2485cb77c129086d468991e1cd55e5ec3d0297c911ed3e7a7b47d767ca8d923"
       },
       "../node_modules/@types/range-parser/index.d.ts": {
         "version": "4e88b833be14c7f384e0dcd57bb30acd799e8e34d212635d693e41a75a71164b",
@@ -1146,11 +1154,15 @@
         "signature": "6e1c6fe784daeba017901db7766e6b872f535defe33b0e0196d2a12c26f50517"
       },
       "../src/cats/cat.controller.ts": {
-        "version": "a432366dfcc6d083a20d803fd5e803ac2ce5b1f206be7d0d8dc57905114223c3",
-        "signature": "2cb8e8f3620ce7667370433e8467409637d87d6eb8a8b9ea3460abbf548b0ddb"
+        "version": "b993aa466d9c716952307743b05b3b963936e715ac2b69c7512344fcb1e7dfd5",
+        "signature": "62b14a110bc2b51a8ed4cf510087b06fc4791b4a69dcdd1a93fdf0b8bb117ec7"
+      },
+      "../src/cats/cat.module.ts": {
+        "version": "86dae2c46526b5825f058d20ce511c3d66c7103a1cd2667eb15f58fa616fa598",
+        "signature": "1d0de6b209308f833a44e0dec183bd786b971e218ced1ca9ff9cf760380d72e9"
       },
       "../src/app.module.ts": {
-        "version": "c3542d5ec1b28c74ac8e53d55ea19869c5673fdd539d63859cf61fbfe26bc2a0",
+        "version": "3eaa98b20d2feb7db5eb11e82e306494ef6891eb100fd23e38b139f5da544cf7",
         "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88"
       },
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": {
@@ -1285,9 +1297,9 @@
         "version": "e25d9bd8f80b6ffbcc8826ed1b407e747e4fbe346c5bab62cbe5837da4eeb189",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
       },
-      "../src/cats/cat.module.ts": {
-        "version": "3277f207168a0336a72d41eb480f61d0aed33c825cc61266f0fa0bf768a4d64f",
-        "signature": "1d0de6b209308f833a44e0dec183bd786b971e218ced1ca9ff9cf760380d72e9"
+      "../src/middlewares/logger.middleware.ts": {
+        "version": "462372ec5978f935466a216bfee980e80c071ff5524116fd319e27148b2b25e7",
+        "signature": "0da9335a61bf49ecc11c0d21a4d91031f254507a60bd922f19de97959a4bd208"
       },
       "../node_modules/@types/anymatch/index.d.ts": {
         "version": "48b52264fa193879a074197839dbb4796fa07e86350ff888e5361e06aa46df76",
@@ -3624,8 +3636,21 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/cats/create-cat.dto.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/cats/cat.interface.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/cats/cat.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
+        "../src/cats/cat.interface.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -3689,8 +3714,19 @@
       ],
       "../src/cats/cat.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
+        "../src/cats/create-cat.dto.ts",
         "../src/cats/cat.service.ts",
         "../node_modules/@types/express/index.d.ts",
+        "../src/cats/cat.interface.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/cats/cat.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/cats/cat.controller.ts",
+        "../src/cats/cat.service.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -3700,8 +3736,7 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/app.controller.ts",
         "../src/app.service.ts",
-        "../src/cats/cat.controller.ts",
-        "../src/cats/cat.service.ts",
+        "../src/cats/cat.module.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -4000,10 +4035,9 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/cats/cat.module.ts": [
+      "../src/middlewares/logger.middleware.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
-        "../src/cats/cat.controller.ts",
-        "../src/cats/cat.service.ts",
+        "../node_modules/@types/express/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -6418,6 +6452,9 @@
       "../src/app.controller.ts": [
         "../src/app.service.ts"
       ],
+      "../src/cats/cat.service.ts": [
+        "../src/cats/cat.interface.ts"
+      ],
       "../node_modules/@types/range-parser/index.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -6476,6 +6513,8 @@
       ],
       "../src/cats/cat.controller.ts": [
         "../src/cats/cat.service.ts",
+        "../src/cats/create-cat.dto.ts",
+        "../src/cats/cat.interface.ts",
         "../node_modules/@types/express/index.d.ts"
       ],
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": [
@@ -6989,6 +7028,10 @@
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/middlewares/logger.middleware.ts": [
+        "../node_modules/@types/express/index.d.ts",
+        "../node_modules/@nestjs/common/index.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -7270,6 +7313,8 @@
       "../node_modules/@nestjs/common/index.d.ts",
       "../src/app.service.ts",
       "../src/app.controller.ts",
+      "../src/cats/create-cat.dto.ts",
+      "../src/cats/cat.interface.ts",
       "../src/cats/cat.service.ts",
       "../node_modules/@types/range-parser/index.d.ts",
       "../node_modules/@types/express-serve-static-core/index.d.ts",
@@ -7278,6 +7323,9 @@
       "../node_modules/@types/connect/index.d.ts",
       "../node_modules/@types/body-parser/index.d.ts",
       "../node_modules/@types/express/index.d.ts",
+      "../src/cats/cat.controller.ts",
+      "../src/cats/cat.module.ts",
+      "../src/app.module.ts",
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
       "../node_modules/@nestjs/core/adapters/index.d.ts",
       "../node_modules/@nestjs/core/constants.d.ts",
@@ -7343,9 +7391,7 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/cats/cat.controller.ts",
-      "../src/cats/cat.module.ts",
-      "../src/app.module.ts"
+      "../src/middlewares/logger.middleware.ts"
     ]
   },
   "version": "3.7.3"

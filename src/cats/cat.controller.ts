@@ -1,20 +1,29 @@
-import { Controller, Get, Post, Req, HttpCode, Redirect, Query, Param } from '@nestjs/common';
+import { Controller, Get, Post, Req, Body, HttpCode, Redirect, Query, Param } from '@nestjs/common';
+import { CreateCatDto } from './create-cat.dto';
 import { CatService } from './cat.service';
 import { Request } from 'express'
+import { Cat } from './cat.interface'
 
 @Controller('cats')
 export class CatController {
   constructor(private readonly catService: CatService) {}
   @Post()
-  create(): string {
+  create(@Body() createCatDto: CreateCatDto): string {
+    console.log(createCatDto)
+    this.catService.create(createCatDto)
     return 'This action adds a new cat';
   }
 
+  @Get()
+  async findAll(): Promise<Cat[]> {
+    return this.catService.findAll();
+  }
+
   @Get('ab*cd')
-  // @HttpCode(204)
-  // @Redirect('https://nestjs.com', 301)
-  findAll(@Req() request: Request): string {
-    return 'This action returns all cats';
+  @HttpCode(204)
+  @Redirect('https://nestjs.com', 301)
+  findAll2(@Req() request: Request): string {
+    return 'Tnvmnvmis action returns all cats';
   }
   // 获取查询字符串参数
   @Get('docs')

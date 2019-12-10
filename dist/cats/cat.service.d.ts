@@ -1,3 +1,6 @@
+import { Cat } from './cat.interface';
 export declare class CatService {
-    getHello(): string;
+    private readonly cats;
+    create(cat: Cat): void;
+    findAll(): Cat[];
 }
