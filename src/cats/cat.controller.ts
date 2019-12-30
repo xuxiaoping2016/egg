@@ -1,5 +1,6 @@
-import { Controller, Get, Post, Req, Body, HttpCode, Redirect, Query, Param } from '@nestjs/common';
+import { Controller, Get, Post, Req, Body, HttpCode, Redirect, Query, Param, HttpException, HttpStatus, UseGuards } from '@nestjs/common';
 import { CreateCatDto } from './create-cat.dto';
+import { RolesGuard } from '../guard/roles.guard';
 import { CatService } from './cat.service';
 import { Request } from 'express'
 import { Cat } from './cat.interface'
@@ -16,6 +17,7 @@ export class CatController {
 
   @Get()
   async findAll(): Promise<Cat[]> {
+    // throw new HttpException('Forbidden', HttpStatus.FORBIDDEN);
     return this.catService.findAll();
   }
 
@@ -36,6 +38,7 @@ export class CatController {
 
   // 获取路由路径参数
   @Get(':id')
+  @UseGuards(RolesGuard)
   findOne(@Param() params): string {
     console.log(params.id);
     return `This action returns a #${params.id} cat`;

@@ -7,23 +7,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
-const app_controller_1 = require("./app.controller");
-const app_service_1 = require("./app.service");
-const cat_module_1 = require("./cats/cat.module");
-const logger_middleware_1 = require("./middlewares/logger.middleware");
-let AppModule = class AppModule {
-    configure(consumer) {
-        consumer
-            .apply(logger_middleware_1.LoggerMiddleware)
-            .forRoutes('cats');
+let ValidationPipe = class ValidationPipe {
+    transform(value, metadata) {
+        return value;
     }
 };
-AppModule = __decorate([
-    common_1.Module({
-        imports: [cat_module_1.CatModule],
-        controllers: [app_controller_1.AppController],
-        providers: [app_service_1.AppService],
-    })
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+ValidationPipe = __decorate([
+    common_1.Injectable()
+], ValidationPipe);
+exports.ValidationPipe = ValidationPipe;
+//# sourceMappingURL=validation.pipe.js.map

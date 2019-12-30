@@ -14,6 +14,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const create_cat_dto_1 = require("./create-cat.dto");
+const roles_guard_1 = require("../guard/roles.guard");
 const cat_service_1 = require("./cat.service");
 let CatController = class CatController {
     constructor(catService) {
@@ -72,6 +73,7 @@ __decorate([
 ], CatController.prototype, "getDocs", null);
 __decorate([
     common_1.Get(':id'),
+    common_1.UseGuards(roles_guard_1.RolesGuard),
     __param(0, common_1.Param()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
